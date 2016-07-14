@@ -1,25 +1,3 @@
-
-'''
-Gauss' Method
-R(1+5R(A-1,4)+4R(A-1,100)+6R(A-1,400),7)
-
-Let A − 1 = year = Y, m = month − 2 mod 12 (March = 1,..., January = −1 mod 12 = 11 and February = 12) and d = days of the month, this formula becomes
-{\displaystyle w=d+\lfloor 2.6m-0.2\rfloor +5R(Y,4)+4R(Y,100)+6R(Y,400){\bmod {7}}.} w=d+\lfloor 2.6m-0.2\rfloor +5R(Y,4)+4R(Y,100)+6R(Y,400){\bmod {7}}.
-
-Let A − 1 = year = y + 100c, this formula becomes
-{\displaystyle w=d+\lfloor 2.6m-0.2\rfloor +5R(y,4)+3R(y,7)+5R(c,4){\bmod {7}}.} w=d+\lfloor 2.6m-0.2\rfloor +5R(y,4)+3R(y,7)+5R(c,4){\bmod {7}}.
-
-d = 1
-[2.6 × 11 − 0.2] = 28 mod 7 = 0
-5R(99,4) = 5 × 3 = 15 mod 7 = 1
-4R(1999,100) = 4 × 99 mod 7 = 4 × 1 = 4
-6R(1999,400) = 6 × 399 mod 7 = 6 × 0 = 0
-3R(99,7) = 3 × 1 = 3
-5R(19,4) = 5 × 3 mod 7 = 1
-w = 1 + 0 + 1 + 4 + 0 = 1 + 0 + 1 + 3 + 1 = 6 = Saturday.
-
-'''
-
 def getDayOfWeek(day, month, year):
 	# Use Gauss' method to determine day of week
 	'''
@@ -50,4 +28,3 @@ def getFirstSundaysInYearRange(yearStart, yearEnd):
 	return total
 	
 print(getFirstSundaysInYearRange(1901, 2000))
-#print(getDayOfWeek(31,12,2000))
